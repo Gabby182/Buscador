@@ -1,0 +1,138 @@
+.container{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(rgb(2, 2, 72), rgb(61, 2, 61));
+}
+.title{
+    font-size:100px;
+    color:#fff;
+    animation: flipTitle 2s;
+}
+
+@keyframes flipTitle {
+   from{
+    transform: rotatex(90deg);
+   } 
+
+   to{
+    transform: rotatex(0deg);
+   }
+}
+    
+.containerInput{
+    background-color: rgba(255,255,255, 0.2);
+    padding: 15px;
+    margin: 34px 0;
+    display: flex;
+    border-radius: 8px;
+    box-shadow: 1px 3px 8px  rgba(0,0,0, 0.5);
+}
+
+.containerInput input{
+    background-color: transparent;
+    outline: none;
+    border:0;
+    font-size: 20px;
+    color: #fff;
+    margin-right: 8px;
+}
+
+.containerInput input::placeholder{
+    color: rgb(205, 197, 197);
+}
+
+.buttonSearch{
+    background-color: transparent;
+    border: 0px;
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    cursor: pointer;
+    transition: transform 0.5s;
+}
+
+.buttonSearch:hover{
+    transform: scale(1.2);
+}
+
+.buttonCleaner{
+    font-size: 20px;
+    font: bold;
+    color: #fff;
+    background: linear-gradient(rgb(123, 12, 81), rgb(115, 38, 192));
+    padding: 15px;
+    border: 0px;
+    margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content:center;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.main{
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items:center;
+    background-color: rgb(248, 197, 229);
+    border-radius: 8px;
+    width: 500px;
+}
+
+.main h2{
+    margin: 10px 0;
+    font-size: 39px;
+}
+
+.main span{
+    font-size: 20px;
+    margin-bottom: 16px;
+    font-weight: bold;
+}
+
+@media (max-width: 575px){
+    .title {
+        font-size:60px;
+    }
+    .containerInput input{
+        font-size: 15px;
+        width: 80%;
+    }
+    .main{
+        width: 80%;
+        min-height:250px;
+    }
+    .main h2{
+        font-size: 25px;
+    }
+    
+    .main span{
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 330px){
+    .title {
+        font-size:40px;
+    }
+    .containerInput input{
+        font-size: 10px;
+        wifth: 70%;
+    }
+    .main{
+        width: 70%;
+        min-height: 250px;
+    }
+    .main h2{
+        font-size: 20px;
+    }
+    
+    .main span{
+        font-size: 10px;
+    }
+}
